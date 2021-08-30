@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Subpages</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="subpage : ${subpages}">
+        <td th:text="${subpage.id}"></td>
+        <td th:text="${subpage.name}"></td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/subpage/add}">Dodaj subpage</a>
+</body>
+</html>
